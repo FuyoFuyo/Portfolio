@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant's Portfolio - Windows XP Theme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Windows XP Background -->
+    <div class="desktop" style="background-image: url('./windows-xp-bliss-4k-lu-3840x2160.jpg')">
+        <!-- Folder Icons -->
+        <div class="icon-container">
+            <div class="icon" data-folder="about">
+                <img src="./Folder Icon.png" alt="About" class="icon-img">
+                <span>About</span>
+            </div>
+            <div class="icon" data-folder="skills">
+                <img src="./Folder Icon.png" alt="Skills" class="icon-img">
+                <span>Skills</span>
+            </div>
+            <div class="icon" data-folder="achievements">
+                <img src="./Folder Icon.png" alt="Achievements" class="icon-img">
+                <span>Achievements</span>
+            </div>
+            <div class="icon" data-folder="profile">
+                <img src="./Folder Icon.png" alt="Profile" class="icon-img">
+                <span>Profile</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Window -->
+    <div class="photo-window" id="about-window" style="display:none; left: 100px; top: 100px;" onmousedown="startDrag(event)">
+        <img src="./About (1).png" alt="About">
+    </div>
+
+    <!-- Skills Window -->
+    <div class="photo-window" id="skills-window" style="display:none; left: 200px; top: 150px;" onmousedown="startDrag(event)">
+        <img src="./Skills (1).png" alt="Skills">
+    </div>
+
+    <!-- Achievements Window -->
+    <div class="photo-window" id="achievements-window" style="display:none; left: 300px; top: 200px;" onmousedown="startDrag(event)">
+        <img src="./Achievements (1).png" alt="Achievements">
+    </div>
+
+    <!-- Profile Window -->
+    <div class="photo-window" id="profile-window" style="display:none; left: 400px; top: 250px;" onmousedown="startDrag(event)">
+        <img src="./Grant%20photo.jpg" alt="Profile">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

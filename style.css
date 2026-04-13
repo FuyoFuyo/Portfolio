@@ -1,0 +1,91 @@
+/* Windows XP Portfolio Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+/* Desktop Background */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Icon Container - Centered Horizontally */
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+/* Desktop Icons */
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    width: 80px;
+    text-align: center;
+}
+
+.icon-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.1s;
+}
+
+.icon span {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+}
+
+.icon:hover .icon-img {
+    transform: scale(1.1);
+}
+
+.icon:active .icon-img {
+    transform: scale(0.95);
+}
+
+/* Photo Window Style - displays images directly */
+.photo-window {
+    position: fixed;
+    z-index: 1000;
+    cursor: move;
+}
+
+.photo-window img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon double-click effect */
+.icon.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px dotted white;
+}

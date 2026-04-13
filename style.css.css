@@ -1,0 +1,217 @@
+/* Windows XP Portfolio Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+/* Desktop Background */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Icon Container - Centered Horizontally */
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+/* Desktop Icons */
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    width: 80px;
+    text-align: center;
+}
+
+.icon-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.1s;
+}
+
+.icon span {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+}
+
+.icon:hover .icon-img {
+    transform: scale(1.1);
+}
+
+.icon:active .icon-img {
+    transform: scale(0.95);
+}
+
+/* XP Window Style */
+.xp-window {
+    position: fixed;
+    width: 400px;
+    background-color: #ecebe4;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    box-shadow: 1px 1px 0 #ffffff inset, 1px 1px 0 #000000;
+    min-width: 250px;
+    z-index: 1000;
+}
+
+/* Photo Window Style - displays images directly */
+.photo-window {
+    position: fixed;
+    z-index: 1000;
+    cursor: move;
+}
+
+.photo-window img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Window Title Bar */
+.window-title-bar {
+    background: linear-gradient(to right, #000080, #1084d7);
+    color: white;
+    padding: 2px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+    height: 20px;
+}
+
+.window-title {
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 2px;
+    flex: 1;
+}
+
+/* Close Button */
+.close-btn {
+    width: 16px;
+    height: 14px;
+    padding: 0;
+    background: linear-gradient(135deg, #dfdfdf, #808080);
+    border: 1px solid;
+    border-color: #dfdfdf #000000 #000000 #dfdfdf;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.close-btn:active {
+    border-color: #000000 #dfdfdf #dfdfdf #000000;
+}
+
+/* Window Content */
+.window-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    min-height: 100px;
+}
+
+.window-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.window-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.window-text {
+    text-align: center;
+    font-size: 11px;
+    flex: 1;
+    line-height: 1.6;
+}
+
+.window-text p {
+    margin: 5px 0;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #c0c0c0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* XP Button Style */
+.xp-button {
+    padding: 4px 12px;
+    background: linear-gradient(to bottom, #dfdfdf, #808080);
+    border: 1px solid;
+    border-color: #dfdfdf #000000 #000000 #dfdfdf;
+    color: black;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 60px;
+    transition: all 0.05s;
+}
+
+.xp-button:hover {
+    background: linear-gradient(to bottom, #e8e8e8, #888888);
+}
+
+.xp-button:active {
+    border-color: #000000 #dfdfdf #dfdfdf #000000;
+    background: linear-gradient(to bottom, #808080, #dfdfdf);
+}
+
+/* Icon double-click effect */
+.icon.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px dotted white;
+}
